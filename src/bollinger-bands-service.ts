@@ -1,9 +1,4 @@
 
-export enum EDirection {
-    LONG,
-    SHORT
-}
-
 export interface IBollingerBands {
     sma: number[]
     lower: number[]
@@ -13,10 +8,9 @@ export interface IBollingerBands {
 export class BollingerBandsService {
 
 
+    public static getBollingerBands(sequence: number[]): IBollingerBands {
 
-    public getBollingerBands(sequence: number[]): IBollingerBands {
-
-        const smaBand = this.getSMABand(sequence)
+        const smaBand = BollingerBandsService.getSMABand(sequence)
         const lowerBand: number[] = []
         const upperBand: number[] = []
 
@@ -26,7 +20,7 @@ export class BollingerBandsService {
             const helperBand = [...smaBand]
 
             const splicedHelperBand = helperBand.splice(counter, helperBand.length)
-            const standardDeviation = this.getStandardDeviation(splicedHelperBand)
+            const standardDeviation = BollingerBandsService.getStandardDeviation(splicedHelperBand)
 
             lowerBand.push(entry - (standardDeviation * 2))
             upperBand.push(entry + (standardDeviation * 2))
@@ -42,7 +36,7 @@ export class BollingerBandsService {
     }
 
 
-    public getSMABand(sequence: number[]): number[] {
+    public static getSMABand(sequence: number[]): number[] {
 
         let counter = 0
         let sum = 0
@@ -59,20 +53,20 @@ export class BollingerBandsService {
 
     }
 
-    public getStandardDeviation(sequence: number[]) {
+    public static getStandardDeviation(sequence: number[]) {
 
-        const average = this.calculateAverage(sequence)
+        const average = BollingerBandsService.calculateAverage(sequence)
 
-        const substractedMeanFromEachAndSquared = this.substractMeanFromEachAndSquare(sequence, average)
+        const substractedMeanFromEachAndSquared = BollingerBandsService.substractMeanFromEachAndSquare(sequence, average)
 
-        const meanOfSquaredDifferences = this.calculateAverage(substractedMeanFromEachAndSquared)
+        const meanOfSquaredDifferences = BollingerBandsService.calculateAverage(substractedMeanFromEachAndSquared)
 
         return Math.sqrt(meanOfSquaredDifferences)
 
     }
 
 
-    public calculateAverage(sequence: number[]) {
+    public static calculateAverage(sequence: number[]) {
 
         let sum = 0
 
@@ -84,7 +78,7 @@ export class BollingerBandsService {
 
     }
 
-    private substractMeanFromEachAndSquare(sequence: number[], average: number): number[] {
+    private static substractMeanFromEachAndSquare(sequence: number[], average: number): number[] {
 
         let squaredDifferences = []
 
