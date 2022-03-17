@@ -1,5 +1,6 @@
 # Bollinger Bands
 
+Bollinger Bands as simple as it gets.
 
 ## Usage Examples
 ```ts
