@@ -25,4 +25,3 @@ Deno.test("should deliver standard deviation", async () => {
     assertEquals(expectedStandardDeviation, BollingerBandsService.getStandardDeviation([6, 8, 12, 14]))
 
 })
-
