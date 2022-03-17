@@ -1,8 +1,8 @@
 # Bollinger Bands
 
-Bollinger Bands as simple as it gets.
+[Bollinger Bands](https://www.youtube.com/watch?v=-6cbdJulb7s) as simple as it gets.
 
-## Usage Examples
+## Usage Example
 ```ts
 
 import { BollingerBandsService, IBollingerBands } from "https://deno.land/x/bollinger_bands/mod.ts"
@@ -17,6 +17,11 @@ console.log(bollingerBands.upper)
 
 ```
 
+## Execute Usage Example
+```sh
+deno run https://deno.land/x/bollinger_bands/usage-example.ts
+```
+
 
 
 ## Execute Unit Tests
@@ -28,11 +33,5 @@ deno test https://deno.land/x/bollinger_bands/src/bollinger-bands-service.spec.t
   
 For further examples you can check the [unit tests]().
 
----
-
-## Further Information & Links
-https://lukkval.com/bollinger-bands-formula-and-calculation/
-
-https://www.youtube.com/watch?v=-6cbdJulb7s
 
 
