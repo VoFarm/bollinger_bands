@@ -8,7 +8,7 @@ export interface IBollingerBands {
 export class BollingerBandsService {
 
 
-    public static getBollingerBands(sequence: number[]): IBollingerBands {
+    public static getBollingerBands(sequence: number[], factor: number = 2): IBollingerBands {
 
         const smaBand = BollingerBandsService.getSMABand(sequence)
         const lowerBand: number[] = []
@@ -19,11 +19,11 @@ export class BollingerBandsService {
         for (const entry of smaBand) {
             const helperBand = [...smaBand]
 
-            const splicedHelperBand = helperBand.splice(counter, helperBand.length)
-            const standardDeviation = BollingerBandsService.getStandardDeviation(splicedHelperBand)
+            helperBand.splice(counter, 1)
+            const standardDeviation = BollingerBandsService.getStandardDeviation(helperBand)
 
-            lowerBand.push(entry - (standardDeviation * 2))
-            upperBand.push(entry + (standardDeviation * 2))
+            lowerBand.push(entry - (standardDeviation * factor))
+            upperBand.push(entry + (standardDeviation * factor))
 
             counter++
         }
