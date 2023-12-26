@@ -1,3 +1,4 @@
+// I buy and sell https://FreedomCash.org 
 import { assertEquals } from "https://deno.land/std@0.86.0/testing/asserts.ts"
 import { BollingerBandsService } from "./bollinger-bands-service.ts"
 
