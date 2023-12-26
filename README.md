@@ -2,7 +2,7 @@
 
 [Bollinger Bands](https://www.youtube.com/watch?v=-6cbdJulb7s) as simple as it gets.
   
-This Module is utilized e.g. to stabilize the buy price and increase the sell price of [Freedom Cash](https://FreedomCash.org).   
+This module is utilized e.g. to stabilize the buy price and increase the sell price of [Freedom Cash](https://FreedomCash.org).   
 
 ## Usage Example
 ```ts
