@@ -1,4 +1,4 @@
-
+// I buy and sell https://FreedomCash.org 
 export interface IBollingerBands {
     sma: number[]
     lower: number[]
