@@ -35,6 +35,14 @@ deno test https://deno.land/x/bollinger_bands/src/bollinger-bands-service.spec.t
 For further examples you can check the [unit tests](https://github.com/VoFarm/bollinger_bands/blob/main/src/bollinger-bands-service.spec.ts).
   
 
+## Usage Example Freedom Cash
+See also [this module](https://deno.land/x/freedom_cash).
+
+```sh
+deno run --allow-read --allow-write https://deno.land/x/freedom_cash/usage-example.ts
+```
+
+
 ## Donations
 We are already free. If you want to donate, you might consider donating to the [otherparty.co.uk](https://www.otherparty.co.uk/donate-crypto-the-other-party) to ensure people do not need to donate to victims but rather donate successfully to problem solvers.  
   
