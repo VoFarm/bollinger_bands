@@ -2,7 +2,7 @@
 
 [Bollinger Bands](https://www.youtube.com/watch?v=-6cbdJulb7s) as simple as it gets.
   
-This module is utilized e.g. to stabilize the buy price and increase the sell price of [Freedom Cash](https://FreedomCash.org).   
+This [module](https://deno.land/x/bollinger_bands) helps to stabilize the buy price and increase the sell price of [Freedom Cash](https://FreedomCash.org).   
 
 ## Usage Example
 ```ts
@@ -29,6 +29,13 @@ deno run https://deno.land/x/bollinger_bands/usage-example.ts
 ```sh
 deno test https://deno.land/x/bollinger_bands/src/bollinger-bands-service.spec.ts
 ```
+
+## Execute Advanced Usage Example
+See also [freedom_cash](https://deno.land/x/freedom_cash).  
+```sh
+deno run --allow-read --allow-write https://deno.land/x/freedom_cash/usage-example.ts
+```
+
 
 ---
   
