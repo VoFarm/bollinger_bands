@@ -2,7 +2,7 @@
 
 [Bollinger Bands](https://www.youtube.com/watch?v=-6cbdJulb7s) as simple as it gets.
   
-This 🦕 [module} is utilized e.g. to stabilize the buy price and increase the sell price of [Freedom Cash](https://FreedomCash.org).   
+This [module](https://deno.land/x/bollinger_bands) is utilized e.g. to stabilize the buy price and increase the sell price of [Freedom Cash](https://FreedomCash.org) via the [freedom_cash module](https://deno.land/x/freedom_cash).   
 
 ## Usage Example
 ```ts
